@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular Two Way Data Binding .</title>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <style type="text/css">
+    ul{
+      list-style: none;
+    }
+    li{
+       display: inline-block;
+       margin:20px 20px;
+        background-color:#eee;
+    }
+    a{
+      text-decoration:none;
+      background-color:#eee;
+      padding: 15px 15px;
+      color:gray; 
+    }
+  </style>
+</head>
+<body ng-app="my_app">
+      <div ng-controller="controls" >
+         <div>
+          <ul>
+           <li><a href="#/home">Home</a></li>
+             <li><a href="#/about">About</a></li>
+             <li><a href="#/services">Services</a></li>
+          </ul>
+         </div>
+       <div class="ng-view"></div>
+      </div>
+</body>
+</html>
