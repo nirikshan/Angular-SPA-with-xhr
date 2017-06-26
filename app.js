@@ -8,13 +8,13 @@ app.controller('controls',function($scope) {
 
 app.config(function($routeProvider) {
 	$routeProvider.when('/home',{
-		templateUrl:'pages/home.html',
+		templateUrl:'home.html',
 	    controller:'homecontrol'
 	}).when('/about',{
-        templateUrl:'pages/about.html',
+        templateUrl:'about.html',
 	    controller:'aboutcontrol'
 	}).when('/services',{
-        templateUrl:'pages/services.html',
+        templateUrl:'services.html',
 	    controller:'servicscontrol'
 	}).otherwise({
         redirectTo:'/home'
@@ -40,7 +40,7 @@ app.controller('servicscontrol',function($scope,$http) {
 	$scope.message = 'This is Services page';
 	$http({
 		method:'POST',
-		url:'server/index.php'
+		url:'index.php'
 	}).then(function(data) {
 		$scope.out = data;
 	})
